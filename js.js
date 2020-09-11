@@ -18,13 +18,16 @@ function reAuthorize(){
 
         body: JSON.stringify({
 
-            client_id: '53115',
-            client_secret: 'afbfa66ab8ab19f9e7e192707ce7ce8586dd8e09',
-            refresh_token: '0558f35b39536a20ee6d1bbcc7f7ef4f6a59ca80',
+            client_id: '***',
+            client_secret: '***',
+            refresh_token: '***',
             grant_type: 'refresh_token'
         })
     })
-    .then(res => getActivites(res))
+    .then(res => {
+        console.log('res', res);
+        getActivites(res))
+    }
       
 }
 
